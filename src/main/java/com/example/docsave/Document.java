@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 public class Document {
 	
 	@Id private String id;
-	
+
 	private String name;
 	private String content;
 
@@ -17,12 +17,17 @@ public class Document {
 		this.content = content;
 	}
 
+	// Gotta have this constructor to allow insertion into the collection
+	Document() {
+		
+	}
+
 	public String getDocument() {
 		return content;
 	}
 
-	public void setDocument(String document) {
-		this.content = document;
+	public void setDocument(String content) {
+		this.content = content;
 	}
 
 	public String getName() {
